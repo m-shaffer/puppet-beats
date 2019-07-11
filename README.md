@@ -45,7 +45,14 @@ Include the `beats` class and pass a list of individual Beats to manage with `ma
 
 ```puppet
 class { 'beats':
-  $managed_beats => ['metricbeat','auditbeat','heartbeat-elastic','packetbeat']
+  $managed_beats => [
+    'auditbeat',
+    'filebeat',
+    'heartbeat-elastic',
+    'journalbeat',
+    'metricbeat',
+    'packetbeat',
+  ]
 }
 ```
 
@@ -57,7 +64,14 @@ There is very few parameters you should need to customise.  The most useful woul
 
 ```puppet
 class { 'beats':
-  managed_beats => ['metricbeat','auditbeat','heartbeat-elastic','packetbeat'],
+  managed_beats => [
+    'auditbeat',
+    'filebeat',
+    'heartbeat-elastic',
+    'journalbeat',
+    'metricbeat',
+    'packetbeat',
+  ],
   config_root  => '/opt/beats'
 }
 ```

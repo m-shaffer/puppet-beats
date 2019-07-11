@@ -4,7 +4,9 @@ describe 'Beats::Managed_beats' do
   describe 'with valid inputs' do
     [
       ['auditbeat'],
+      ['filebeat'],
       ['heartbeat-elastic'],
+      ['journalbeat'],
       ['metricbeat'],
       ['packetbeat'],
       %w[auditbeat heartbeat-elastic],
