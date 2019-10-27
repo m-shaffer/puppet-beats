@@ -36,7 +36,7 @@ class beats::config {
       # }
 
       case type($settings) {
-        String: {
+        Type[String]: {
           file { "${beat}_config":
             ensure => 'file',
             path   => $beat_config,
